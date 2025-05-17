@@ -8,7 +8,7 @@
     let socket: WebSocket;
 
     onMount(() => {
-        socket = new WebSocket("ws://adapted-distinctly-goblin.ngrok-free.app/ws");
+        socket = new WebSocket("wss://adapted-distinctly-goblin.ngrok-free.app/ws");
 
         socket.addEventListener("open", () => {
             send({ type: "JoinQueue", payload: { name: username } });
